@@ -49,6 +49,7 @@
         <!-- Theme CSS -->
         <link href="/css/creative.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/css/animate.min.css">
+        <link rel="stylesheet" href="/css/galeria.css">
         <link rel="stylesheet" href="/css/main.css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -84,6 +85,8 @@
 
         <!-- WOW.js -->
         <script src="/js/wow.min.js"></script>
+        <script src="/js/modernizr.custom.js"></script>
+        <script src="/js/galeria.js"></script>
 
     @show
 

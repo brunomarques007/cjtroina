@@ -81,8 +81,133 @@
         </div>
     </aside>
 
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
+<!-- Galeria -->
+    <section class="grid3d horizontal" id="grid3d">
+        <div class="grid-wrap">
+            <div class="grid text-center">
+                <figure class="wow zoomIn">
+                    <img src="/images/clientes/globo.png" class="img-responsive" alt="img04"/>
+                </figure>
+                <figure class="wow zoomIn">
+                    <img src="/images/clientes/academicos-da-rocinha.png" class="img-responsive" alt="img03"/>
+                </figure>
+                <figure class="wow zoomIn">
+                    <img src="/images/clientes/stambul.png" class="img-responsive" alt="img01"/>
+                </figure>
+                <figure class="wow zoomIn">
+                    <img src="/images/clientes/chilli-beans.png" class="img-responsive" alt="img05"/>
+                </figure>
+                <figure class="wow zoomIn">
+                    <img src="/images/clientes/loterias-caixa.png" class="img-responsive" alt="img02"/>
+                </figure>
+                <figure class="wow zoomIn">
+                    <img src="/images/clientes/ibeu.png" class="img-responsive" alt="img08"/>
+                </figure>
+                <figure class="wow zoomIn">
+                    <img src="/images/clientes/metro-rio.png" class="img-responsive" alt="img09"/>
+                </figure>
+            </div>
+        </div><!-- /.grid-wrap -->
+        <div class="content">
+            <div>
+                <div class="portfolio-img">
+                    <img src="/images/portfolio/01.jpg" alt="">
+                </div>
+                <p class="portfolio-text">Esse é o meu teste.</p>
+                <p class="portfolio-text">but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+                <div class="portfolio-img">
+                    <img src="/images/portfolio/02.jpg" alt="">
+                </div>
+                <p class="portfolio-text">but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+            </div>
+            <div>
+                <div class="portfolio-img"></div>
+                <p class="portfolio-text">Thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+                <p class="portfolio-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be save.</p>
+            </div>
+            <div>
+                <div class="portfolio-img"></div>
+                <p class="portfolio-text">he stars.</p>
+                <p class="portfolio-text">Thing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+            </div>
+            <div>
+                <div class="portfolio-img"></div>
+                <p class="portfolio-text">but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+                <p class="portfolio-text">ross the stars.</p>
+            </div>
+            <div>
+                <div class="portfolio-img"></div>
+                <p class="portfolio-text">T burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+                <p class="portfolio-text">Ththing, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+            </div>
+            <div>
+                <div class="portfolio-img"></div>
+                <p class="portfolio-text">Thecross the stars.</p>
+                <p class="portfolio-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be thiss the stars.</p>
+            </div>
+            <div>
+                <div class="portfolio-img"></div>
+                <p class="portfolio-text">The onls the stars.</p>
+                <p class="portfolio-text">The only people for me are the mad ones, the ones who are mad to live, mad to talk, mad to be savedng, but burn, burn, burn like fabulous yellow roman candles exploding like spiders across the stars.</p>
+            </div>
+            <span class="loading"></span>
+            <span class="icon close-content"><i class="fa fa-2x fa-times"></i>
+            {{-- <svg style="width: 10%">
+                    <g>
+                        <path d="M26,0C11.664,0,0,11.663,0,26s11.664,26,26,26s26-11.663,26-26S40.336,0,26,0z M26,50C12.767,50,2,39.233,2,26 S12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z" />
+                        <path d="M35.707,16.293c-0.391-0.391-1.023-0.391-1.414,0L26,24.586l-8.293-8.293c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414L24.586,26l-8.293,8.293c-0.391,0.391-0.391,1.023,0,1.414C16.488,35.902,16.744,36,17,36 s0.512-0.098,0.707-0.293L26,27.414l8.293,8.293C34.488,35.902,34.744,36,35,36s0.512-0.098,0.707-0.293 c0.391-0.391,0.391-1.023,0-1.414L27.414,26l8.293-8.293C36.098,17.316,36.098,16.684,35.707,16.293z" />
+                    </g>
+                </svg> --}}
+            </span>
+        </div>
+    </section>
+<!-- /.Galeria -->
+
+
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Entre em contato!</h2>
+                    <hr class="primary">
+                    <p>Por que não falar conosco e pedir nossa orientação? Entraremos em contato contigo o mais breve possível!</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <ul>
+                        <li><a href="tel:+552135989779">(21) 3598-9779</a></li>
+                        <li><a href="tel:+5521986100017">(21) 98610-0017</a></li>
+                        <li><a href="tel:+5521987523393">(21) 98752-3393</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:cj@cjtroina.com.br">cj@cjtroina.com.br</a></p>
+                    <h4>Endereço:</h4>
+                    <p>Estrada do Galeão, 1271, sala 304.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @section('js')
+    @parent
+        <script>
+            var wow = new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 0,
+                mobile: true,
+                live: true
+            });
+            wow.init();
+            new grid3D( document.getElementById( 'grid3d' ) );
+        </script>
+    @stop
+@stop
+
+        {{-- <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <div class="col-lg-4 col-sm-6 wow zoomIn">
                     <a href="images/portfolio/01.jpg" class="portfolio-box">
@@ -266,48 +391,4 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Entre em contato!</h2>
-                    <hr class="primary">
-                    <p>Por que não falar conosco e pedir nossa orientação? Entraremos em contato contigo o mais breve possível!</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <ul>
-                        <li><a href="tel:+552135989779">(21) 3598-9779</a></li>
-                        <li><a href="tel:+5521986100017">(21) 98610-0017</a></li>
-                        <li><a href="tel:+5521987523393">(21) 98752-3393</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:cj@cjtroina.com.br">cj@cjtroina.com.br</a></p>
-                    <h4>Endereço:</h4>
-                    <p>Estrada do Galeão, 1271, sala 304.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    @section('js')
-    @parent
-        <script>
-            var wow = new WOW({
-                boxClass: 'wow',
-                animateClass: 'animated',
-                offset: 0,
-                mobile: true,
-                live: true
-            });
-            wow.init();
-        </script>
-    @stop
-@stop
+        </div> --}}

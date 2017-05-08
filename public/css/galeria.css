@@ -1,0 +1,334 @@
+/*@import url(//fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome-webfont.eot');
+	src:url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/fontawesome-webfont.woff') format('woff'),
+		url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+		url('../fonts/fontawesome-webfont.svg?#fontawesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}*/
+
+/**, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }*/
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+.container {
+	overflow: hidden;
+}
+
+
+body {
+	position: relative;
+}
+
+.noscroll {
+	overflow: hidden;
+}
+
+.grid-wrap {
+	margin: 10px auto 0;
+	max-width: 1090px;
+	width: 100%;
+	padding: 0;
+	-webkit-perspective: 1500px;
+	perspective: 1500px;
+}
+
+.grid {
+	position: relative;
+	-webkit-transition: all 0.5s cubic-bezier(0,0,0.25,1);
+	transition: all 0.5s cubic-bezier(0,0,0.25,1);
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.view-full .grid {
+	-webkit-transform: translateZ(-1500px);
+	transform: translateZ(-1500px);
+}
+
+.grid figure,
+.grid .placeholder {
+	width: 340px;
+	height: 300px;
+}
+
+.grid figure {
+	margin: 10px;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.grid figure.active {
+	opacity: 0;
+}
+
+.grid .placeholder {
+	pointer-events: none;
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+.placeholder > div {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.placeholder .front img {
+	width: 100%;
+	height: 100%;
+}
+
+.placeholder .back {
+	background: white;
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.view-full .placeholder {
+	-webkit-transition: all 0.5s 0.1s cubic-bezier(0,0,0.25,1);
+	transition: all 0.5s 0.1s cubic-bezier(0,0,0.25,1);
+}
+
+.horizontal .view-full .placeholder {
+	-webkit-transform: translateZ(1500px) rotateY(-179.9deg);
+	transform: translateZ(1500px) rotateY(-179.9deg);
+}
+
+.grid figure img {
+	display: block;
+	width: 100%;
+}
+
+.content,
+.loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none; /* Careful, does not work in IE < 11 http://caniuse.com/#search=pointer-events */
+}
+
+.content {
+	overflow-y: scroll;
+	height: 0;
+	background: #fff;
+	visibility: hidden;
+	z-index: 1031;
+	-webkit-overflow-scrolling: touch;
+}
+
+.loading {
+	opacity: 0;
+	z-index: 1;
+	background: transparent url(../images/preloader.gif) no-repeat center center;
+	-webkit-transform: scale(0.5);
+	transform: scale(0.5);
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+.loading.show {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.content.show {
+	height: auto;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+.content > div {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	height: 0;
+	opacity: 0;
+	background: #fff;
+}
+
+.content > div.show {
+	height: auto;
+	opacity: 1;
+	-webkit-transition: opacity 0.6s;
+	transition: opacity 0.6s;
+}
+
+.icon:before {
+	font-family: 'FontAwesome';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.close-content {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	right: 10px;
+	font-size: 1.6em;
+	color: #555;
+	cursor: pointer;
+	pointer-events: none;
+	padding: 1em;
+	opacity: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.close-content:hover {
+	color: #999;
+}
+
+.content > div.show ~ .close-content {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/*.close-content:before {
+	content: "\e602";
+}*/
+
+/* Dummy content */
+
+.portfolio-img,
+.portfolio-text {
+	max-width: 650px;
+	width: 90%;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+.portfolio-img img,
+.portfolio-text img {
+    max-width: 100%;
+}
+
+.horizontal .portfolio-img,
+.horizontal .portfolio-text {
+	-webkit-transform: translateX(-100px);
+	transform: translateX(-100px);
+}
+
+.content > div.show .portfolio-img,
+.content > div.show .portfolio-text {
+	opacity: 1;
+}
+
+.horizontal .content > div.show .portfolio-img,
+.horizontal .content > div.show .portfolio-text {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+p.portfolio-text:nth-child(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+p.portfolio-text:nth-child(3) {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.portfolio-img {
+	height: auto;
+	margin: 30px auto;
+}
+
+.portfolio-text {
+	text-align: left;
+	margin: 0 auto;
+	padding: 10px 0;
+	color: #333;
+	font-size: 1em;
+}
+
+.portfolio-text:last-child {
+	padding-bottom: 100px;
+}
+
+/* Simple fallback */
+/* if any of these are not supported, a simple fallback will be shown */
+.no-pointerevents .content,
+.no-csstransforms3d .content,
+.no-csstransitions .content,
+.no-pointerevents .content > div,
+.no-csstransforms3d .content > div,
+.no-csstransitions .content > div,
+.no-pointerevents .close-content,
+.no-csstransforms3d .close-content,
+.no-csstransitions .close-content {
+	opacity: 1;
+	visibility: visible;
+	display: none;
+	height: auto;
+}
+
+.no-pointerevents .show .close-content,
+.no-csstransforms3d .show .close-content,
+.no-csstransition .show .close-content,
+.no-pointerevents div.show,
+.no-csstransforms3d div.show,
+.no-csstransitions div.show,
+.no-csstransitions .portfolio-img,
+.no-csstransitions .portfolio-text,
+.no-csstransforms3d .portfolio-img,
+.no-csstransforms3d .portfolio-text,
+.no-pointerevents .portfolio-img,
+.no-pointerevents .portfolio-text {
+	display: block !important;
+	opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+
+	.grid figure,
+	.grid .placeholder {
+		width: 240px;
+		height: 212px;
+	}
+
+}
